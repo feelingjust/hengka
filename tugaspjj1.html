@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangkuman - Cyber Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 31, 49, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #3b82f6;
+            --accent: #00f2fe;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 242, 254, 0.1) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .card strong {
+            color: var(--text-main);
+        }
+
+        .conclusion-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 20px;
+        }
+
+        .conclusion-card h2 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .conclusion-card p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Rangkuman Materi</span>
+        <h1>Jenis-Jenis Cyber Attack</h1>
+        <p class="subtitle">Eksplorasi ancaman keamanan siber dan cara kerjanya</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-number">01</div>
+            <h3>Clickjacking</h3>
+            <p><strong>Pengertian:</strong> Teknik jebakan visual menggunakan lapisan transparan (iFrame) di atas halaman web.</p>
+            <p><strong>Cara Kerja:</strong> Korban merasa mengeklik tombol biasa, padahal mengeklik tindakan tersembunyi seperti mengizinkan akses kamera/lokasi.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">02</div>
+            <h3>Phishing</h3>
+            <p><strong>Pengertian:</strong> Penipuan dengan berpura-pura menjadi pihak resmi atau terpercaya.</p>
+            <p><strong>Cara Kerja:</strong> Pelaku mengirim pesan atau tautan palsu untuk mencuri data sensitif seperti username dan password.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">03</div>
+            <h3>Identity Theft</h3>
+            <p><strong>Pengertian:</strong> Pencurian data pribadi (NIK, KTP, nama ibu kandung) untuk disalahgunakan.</p>
+            <p><strong>Cara Kerja:</strong> Data yang dicuri digunakan untuk mengajukan pinjaman online palsu atau penipuan atas nama korban.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">04</div>
+            <h3>Social Engineering</h3>
+            <p><strong>Pengertian:</strong> Manipulasi psikologis manusia agar menyerahkan informasi sensitif.</p>
+            <p><strong>Cara Kerja:</strong> Berfokus pada titik lemah manusia, misalnya menyamar sebagai petugas bank yang meminta kode OTP.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">05</div>
+            <h3>Credential Stuffing</h3>
+            <p><strong>Pengertian:</strong> Serangan yang memanfaatkan kebiasaan menggunakan password sama di berbagai akun.</p>
+            <p><strong>Cara Kerja:</strong> Pelaku mencoba data login dari bocoran satu situs untuk membobol akun di situs lain.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">06</div>
+            <h3>DDoS Attack</h3>
+            <p><strong>Pengertian:</strong> Membanjiri server dengan trafik palsu hingga sistem tidak dapat diakses.</p>
+            <p><strong>Cara Kerja:</strong> Menggunakan jaringan botnet untuk menyerang server hingga tumbang.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">07</div>
+            <h3>Brute Force Attack</h3>
+            <p><strong>Pengertian:</strong> Metode mencoba kombinasi kata sandi secara berulang.</p>
+            <p><strong>Cara Kerja:</strong> Menggunakan software khusus untuk menebak password secara otomatis.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">08</div>
+            <h3>Eavesdropping Attack</h3>
+            <p><strong>Pengertian:</strong> Penyadapan komunikasi digital secara diam-diam melalui jaringan.</p>
+            <p><strong>Cara Kerja:</strong> Menyadap lalu lintas data pada Wi-Fi publik yang tidak aman.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">09</div>
+            <h3>Man-in-the-Middle (MitM)</h3>
+            <p><strong>Pengertian:</strong> Menyusup di tengah-tengah jalur komunikasi dua pihak.</p>
+            <p><strong>Cara Kerja:</strong> Pelaku menyadap dan dapat mengubah isi pesan tanpa disadari korban.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">10</div>
+            <h3>Typosquatting</h3>
+            <p><strong>Pengertian:</strong> Pembuatan situs web palsu yang memanfaatkan kesalahan ketik domain.</p>
+            <p><strong>Cara Kerja:</strong> Mengarahkan pengguna yang typo (misal: shope.com) ke web jebakan untuk mengambil data.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">11</div>
+            <h3>Insider Threat</h3>
+            <p><strong>Pengertian:</strong> Ancaman keamanan yang berasal dari internal organisasi.</p>
+            <p><strong>Cara Kerja:</strong> Dilakukan oleh pegawai/pihak ketiga yang punya akses ke sistem internal.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">12</div>
+            <h3>SQL Injection</h3>
+            <p><strong>Pengertian:</strong> Eksploitasi celah keamanan pada basis data (database) situs web.</p>
+            <p><strong>Cara Kerja:</strong> Menyuntikkan perintah SQL khusus pada form input untuk mengambil atau merusak data.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">13</div>
+            <h3>DNS Poisoning</h3>
+            <p><strong>Pengertian:</strong> Peracunan cache pada DNS Server dengan informasi IP palsu.</p>
+            <p><strong>Cara Kerja:</strong> Mengalihkan pengguna yang mengetik URL asli ke situs web palsu.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">14</div>
+            <h3>Drive-by Download</h3>
+            <p><strong>Pengertian:</strong> Perangkat terinfeksi malware secara otomatis hanya dengan mengunjungi web tertentu.</p>
+            <p><strong>Cara Kerja:</strong> Malware terunduh otomatis tanpa perlu mengklik tombol apa pun.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">15</div>
+            <h3>Cross-Site Scripting (XSS)</h3>
+            <p><strong>Pengertian:</strong> Penyuntikan skrip kode jahat ke dalam situs web terpercaya.</p>
+            <p><strong>Cara Kerja:</strong> Skrip berjalan di browser pengunjung untuk mencuri data sesi/cookie.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">16</div>
+            <h3>IoT Exploitation</h3>
+            <p><strong>Pengertian:</strong> Eksploitasi celah keamanan pada perangkat pintar terhubung internet.</p>
+            <p><strong>Cara Kerja:</strong> Mengambil alih CCTV/Smart TV untuk meretas jaringan rumah.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">17</div>
+            <h3>Zero-Day Exploit</h3>
+            <p><strong>Pengertian:</strong> Serangan pada celah aplikasi yang belum diketahui oleh pengembang.</p>
+            <p><strong>Cara Kerja:</strong> Memanfaatkan celah sebelum perbaikan/patch keamanan dirilis.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">18</div>
+            <h3>Supply Chain Attack</h3>
+            <p><strong>Pengertian:</strong> Serangan tidak langsung yang menargetkan vendor/pihak ketiga.</p>
+            <p><strong>Cara Kerja:</strong> Menyisipkan malware ke update software resmi dari penyedia terpercaya.</p>
+        </div>
+    </div>
+
+    <div class="conclusion-card">
+        <h2>Kesimpulan</h2>
+        <p>Serangan siber sangat beragam, mulai dari memanipulasi manusia (Social Engineering), memanfaatkan kelalaian (Typosquatting), hingga mengeksploitasi celah teknis sistem (SQL Injection, Zero-Day Exploit). Keamanan digital bergantung pada kombinasi sistem pengamanan yang kuat dan kewaspadaan pengguna.</p>
+    </div>
+</div>
+
+</body>
+</html>

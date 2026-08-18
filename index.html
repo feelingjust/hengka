@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirror Page</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:'Courier New',Courier,monospace;background-color:#0c0c0c;color:#ddd;line-height:1.6}.container{max-width:900px;margin:40px auto;background-color:#111;padding:25px;border:1px solid #222;border-radius:8px;box-shadow:0 0 15px #000}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.info-grid div{padding:6px 10px;border-bottom:1px solid #333}.info-grid b{color:#999}.highlight{color:#ff2d75}.domain a{color:#ff2d75;text-decoration:none;word-break:break-all}.logos{display:flex;justify-content:center;align-items:center;gap:40px;margin:30px 0;flex-wrap:wrap}.logos img{height:120px;max-width:100%;object-fit:contain}.text-section{text-align:center;padding:0 10px;font-size:15px}.text-section p{margin:12px 0}audio{margin:25px auto;display:block;width:90%;max-width:500px}.report{text-align:right;font-size:12px;color:#666}.footer-banner{background-color:#d03c5d;color:#fff;text-align:center;padding:12px;font-size:14px;font-weight:bold;margin-top:40px}.footer-banner a{color:#fff;text-decoration:underline}@media(max-width:600px){.info-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="info-grid">
+        <div><b>Date:</b> <span id="currentDate"></span></div>
+        <div><b>Time:</b> <span id="currentTime"></span></div>
+        <div><b>System:</b> Linux</div>
+        <div><b>Notifier:</b> <span class="highlight">NanTzy1992</span></div>
+        <div><b>Web Server:</b> LiteSpeed</div>
+        <div><b>Team:</b> <span class="highlight">KUNINGAN EXPLOITER</span></div>
+        <div><b>IP:</b> <span class="highlight">148.113.35.111</span></div>
+        <div class="domain"><b>Domain:</b> <a href="" target="_blank">Not Found</a></div>
+    </div>
+
+    <div class="logos">
+        <img src="https://n.sarviola.my.id/sirlogon.gif" alt="Logo">
+    </div>
+
+    <div class="text-section">
+        <p><strong>[+] NanTzy1992 Feat Lioni11 [+]</strong></p>
+        <p>Behind the screams and cries of children, Palestine still stands with wounds and hope.<br>The world may be silent, but our hearts are not.<br>Independence is not a choice, but the right of every nation.<br>We may be far away, but our prayers and voices are always with them.<br>Free Palestine, until justice truly comes.</p>
+        <p>Greetz:<br>- Hacktivist Indonesia -<br> - Cyber Error System -<br> - Jaktim Error System -<br>- Kuningan Exploiter - <br>- IndoHaxSec - <br>- GanoSecTeam -<br>- !Nanz! -</p>
+    </div>
+
+    <audio controls>
+        <source src="https://n.sarviola.my.id/sirsounde.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="report">report</div>
+</div>
+
+<div class="footer-banner">
+    Vulnerability Research. Bug Bounty. Responsible Disclosure.<br>
+    <a href="sarviola.my.id" target="_blank">sarviola.my.id</a>
+</div>
+
+<script>
+function updateClock() {
+    var now = new Date();
+    var dateStr = now.toLocaleDateString('en-US', { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+    });
+    var timeStr = now.toLocaleTimeString('en-US', { 
+        hour12: false, 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+    });
+    document.getElementById('currentDate').textContent = dateStr;
+    document.getElementById('currentTime').textContent = timeStr;
+}
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
